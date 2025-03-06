@@ -1,0 +1,33 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.top-word {
+  font-family: 'KazItalic', sans-serif;
+  font-size: 6em;
+}
+
+@font-face {
+  font-family: 'KazItalic';
+  src: url('/fonts/KZ_Balmoral.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
