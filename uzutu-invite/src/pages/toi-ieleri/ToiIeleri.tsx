@@ -1,20 +1,59 @@
-import { motion } from "framer-motion";
-import reactLogo from "../../assets/react.svg";
+import { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const ToiIeleri = () => {
+  const [scrollDir, setScrollDir] = useState("down");
+  const controls = useAnimation();
+  const imgControls = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      setScrollDir(window.scrollY > lastScrollY ? "down" : "up");
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, x: 0, y: 0 });
+      imgControls.start({ opacity: 1, x: 0, y: 0 });
+    } else {
+      controls.start({
+        opacity: 0,
+        x: scrollDir === "down" ? 200 : -200,
+        y: 0,
+      });
+      imgControls.start({
+        opacity: 0,
+        x: scrollDir === "down" ? 200 : -200,
+        y: 0,
+      });
+    }
+  }, [inView, scrollDir, controls, imgControls]);
   return (
-    <div>
-      <div className="absolute flex items-center justify-center top-330 -left-30 p-10px">
-        <motion.img
-          src={reactLogo}
-          alt="Background"
-          className="w-96 h-96 opacity-20"
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-        />
-      </div>
+    <div className="p-40px">
+      <br />
+      <br />
+      <br />
       <h2 className="top-word">Той иелері</h2>
-      <h2>ҚАНАТ</h2>
+      <motion.h3
+        ref={ref}
+        className="text-4xl mt-20"
+        initial={{ opacity: 0, x: 200 }}
+        animate={controls}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      >
+        ҚАНАТ
+      </motion.h3>
+      <br />
+      <br />
     </div>
   );
 };
