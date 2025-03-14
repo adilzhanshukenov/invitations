@@ -39,7 +39,7 @@ const Preword = () => {
   }, [inView, scrollDir, controls, imgControls]);
   return (
     <div>
-      <h1>ҚЫЗ УЗАТУ</h1>
+      <h1>ҚЫЗ ҰЗАТУ</h1>
 
       <br />
 
