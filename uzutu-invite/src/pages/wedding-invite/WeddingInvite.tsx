@@ -5,6 +5,8 @@ import ToiIeleri from "../toi-ieleri/ToiIeleri";
 import Saualnama from "../saualnama/Saualnama";
 import Schedule from "../schedule/Schedule";
 import Invite from "../invite/Invite";
+import Preword from "../preword/Preword";
+import CountdownTimer from "../../components/CountdownTimer";
 
 export default function WeddingInvite() {
   return (
@@ -61,11 +63,13 @@ export default function WeddingInvite() {
           alt="wedding pic"
         />
       </div>
+      <Preword />
       <Invite />
       <Schedule />
       <Address />
       <ToiIeleri />
       <Saualnama />
+      <CountdownTimer />
     </div>
   );
 }

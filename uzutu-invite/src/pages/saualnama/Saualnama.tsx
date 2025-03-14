@@ -53,11 +53,11 @@ const Saualnama = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center p-10">
       <h1 className="text-2xl top-word mt-20">Сауалнама</h1>
 
       <h2>
-        ТӨМЕНДЕГІ САУАЛНАМАНЫ ТОЛТЫРЫП; ТОЙҒА ҚАТЫСУЫҢЫЗДЫ РАСТАУЫҢЫЗДЫ
+        ТӨМЕНДЕГІ САУАЛНАМАНЫ ТОЛТЫРЫП, ТОЙҒА ҚАТЫСУЫҢЫЗДЫ РАСТАУЫҢЫЗДЫ
         СҰРАЙМЫЗ.
       </h2>
       <br />
@@ -74,7 +74,7 @@ const Saualnama = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="mt-1 p-2 w-sm border rounded-md"
+            className="mt-1 p-2 w-sm border rounded-md w-80"
             required
           />
         </label>
@@ -100,8 +100,11 @@ const Saualnama = () => {
             )
           )}
         </fieldset>
-        <button type="submit">ЖАУАПТЫ ЖІБЕРУ</button>
+        <button style={{ backgroundColor: "green" }} type="submit">
+          ЖАУАПТЫ ЖІБЕРУ
+        </button>
       </form>
+      <br />
       <br />
     </div>
   );

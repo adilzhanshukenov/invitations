@@ -1,8 +1,9 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const Invite = () => {
+const Preword = () => {
   const [scrollDir, setScrollDir] = useState("down");
   const controls = useAnimation();
   const imgControls = useAnimation();
@@ -27,67 +28,63 @@ const Invite = () => {
     } else {
       controls.start({
         opacity: 0,
-        x: scrollDir === "down" ? 150 : -200,
+        x: scrollDir === "down" ? 200 : -200,
         y: 0,
       });
       imgControls.start({
         opacity: 0,
-        x: scrollDir === "down" ? 150 : -200,
+        x: scrollDir === "down" ? 200 : -200,
         y: 0,
       });
     }
   }, [inView, scrollDir, controls, imgControls]);
   return (
-    <div className="relative">
+    <div>
+      <h1>ҚЫЗ УЗАТУ</h1>
+
+      <br />
+
+      <h2 className="text-2xl">
+        Құрметті қонақтар! <br />
+        Сіздерді аяулы қызымыз
+      </h2>
+
+      <br />
+      <br />
       <motion.h2
         ref={ref}
-        className="text-2xl top-word mt-20"
-        initial={{ opacity: 0, x: 150 }}
+        className="text-2xl top-word"
+        initial={{ opacity: 0, x: 50 }}
         animate={controls}
-        transition={{ duration: 0.5, delay: 0.3, ease: "easeIn" }}
+        transition={{ duration: 0.8, delay: 0.2 }}
       >
-        Той салтанаты
+        Мерейдің
       </motion.h2>
 
-      {/* Картинка, выезжающая вместе с текстом */}
-      <motion.img
+      <br />
+
+      <h2 className="text-2xl">
+        Ұзату тойына <br /> арналған салтанатты <br /> ақ дастарханымздың <br />
+        қадірлі қонағы болуға <br /> шақырамыз!
+      </h2>
+
+      <img
         ref={ref}
-        src="images/main2.jpg"
-        alt="Wedding"
+        src="images/flower2.png"
+        alt="Flower"
         style={{
-          width: "220px",
+          width: "80%",
           zIndex: "20",
-          height: "400px",
+          height: "30%",
           borderRadius: "20px",
           marginLeft: "auto",
           marginRight: "auto",
         }}
-        className="w-64 h-64 mr-auto ml-auto"
-        initial={{ opacity: 0, x: 200 }}
-        animate={imgControls}
-        transition={{ duration: 0.6, delay: 0.5, ease: "easeIn" }}
       />
+
       <br />
-      <motion.h1
-        ref={ref}
-        className="text-2xl"
-        initial={{ opacity: 0, x: 200 }}
-        animate={controls}
-        transition={{ duration: 0.8, delay: 0.6, ease: "easeIn" }}
-      >
-        13.06.2025
-      </motion.h1>
-      <motion.label
-        ref={ref}
-        className="text-4xl"
-        initial={{ opacity: 0, x: 200 }}
-        animate={controls}
-        transition={{ duration: 0.8, delay: 0.8, ease: "easeIn" }}
-      >
-        18:00
-      </motion.label>
     </div>
   );
 };
 
-export default Invite;
+export default Preword;
