@@ -75,7 +75,7 @@ const Saualnama = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="mt-1 p-2 w-sm border rounded-md w-80"
+            className="mt-1 p-2 w-sm border rounded-md"
             required
           />
         </label>

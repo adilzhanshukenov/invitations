@@ -31,7 +31,7 @@ export default function WeddingInvite() {
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
         />
       </div>
-      <div className="absolute flex items-center justify-center top-550 -left-50">
+      <div className="absolute flex items-center justify-center top-650 -left-50">
         <motion.img
           src={round}
           alt="Background"
@@ -40,7 +40,7 @@ export default function WeddingInvite() {
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
         />
       </div>
-      <div className="absolute flex items-center justify-center top-850 -right-50">
+      <div className="absolute flex items-center justify-center top-990 -right-50">
         <motion.img
           src={round}
           alt="Background"
