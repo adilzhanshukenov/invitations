@@ -38,7 +38,7 @@ const Preword = () => {
     }
   }, [inView, scrollDir, controls, imgControls]);
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <h1>ҚЫЗ ҰЗАТУ</h1>
 
       <br />
@@ -67,19 +67,7 @@ const Preword = () => {
         қадірлі қонағы болуға <br /> шақырамыз!
       </h2>
 
-      <img
-        ref={ref}
-        src="images/flower2.png"
-        alt="Flower"
-        style={{
-          width: "80%",
-          zIndex: "20",
-          height: "30%",
-          borderRadius: "20px",
-          marginLeft: "auto",
-          marginRight: "auto",
-        }}
-      />
+      <img src="/images/flower1.png" alt="white flower" className="w-64 h-64" />
 
       <br />
     </div>

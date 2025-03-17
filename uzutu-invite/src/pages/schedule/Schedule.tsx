@@ -156,7 +156,7 @@ const Schedule = () => {
         Шығарып салу рәсімі
       </motion.h3>
 
-      <img src="/images/chris.png" alt="Chris" className="w-64 h-64" />
+      <img src="/images/flower3.png" alt="Chris" className="w-64 h-64" />
     </div>
   );
 };

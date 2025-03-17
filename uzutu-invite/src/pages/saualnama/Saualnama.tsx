@@ -55,7 +55,8 @@ const Saualnama = () => {
   return (
     <div className="flex flex-col justify-center items-center p-10">
       <h1 className="text-2xl top-word mt-20">Сауалнама</h1>
-
+      <br />
+      <br />
       <h2>
         ТӨМЕНДЕГІ САУАЛНАМАНЫ ТОЛТЫРЫП, ТОЙҒА ҚАТЫСУЫҢЫЗДЫ РАСТАУЫҢЫЗДЫ
         СҰРАЙМЫЗ.

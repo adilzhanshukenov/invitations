@@ -11,10 +11,6 @@ import CountdownTimer from "../../components/CountdownTimer";
 export default function WeddingInvite() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-gray-100 text-center">
-      <div className="absolute -top-20 left-0 w-full">
-        <img src="/images/back-flowers2.png" alt="Background flowers" />
-      </div>
-
       {/* Вращающийся фон */}
       <div className="absolute flex items-center justify-center top-100 -left-50">
         <motion.img

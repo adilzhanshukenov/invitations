@@ -58,7 +58,7 @@ const Address = () => {
 
       <motion.h3
         ref={ref}
-        className="text-2xl"
+        className="text-2xl text-bold"
         initial={{ opacity: 0, x: 100 }}
         animate={controls}
         transition={{ duration: 0.8, delay: 0.5 }}
