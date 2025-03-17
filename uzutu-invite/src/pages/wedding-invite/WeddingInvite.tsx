@@ -10,7 +10,7 @@ import CountdownTimer from "../../components/CountdownTimer";
 
 export default function WeddingInvite() {
   return (
-    <div className="relative min-h-screen min-2-screen overflow-hidden bg-gray-100 text-center">
+    <div className="relative min-h-screen min-w-screen overflow-hidden bg-gray-100 text-center">
       {/* Вращающийся фон */}
       <div className="absolute flex items-center justify-center top-100 -left-50">
         <motion.img
