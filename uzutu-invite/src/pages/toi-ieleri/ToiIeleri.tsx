@@ -42,7 +42,7 @@ const ToiIeleri = () => {
       <br />
       <br />
       <br />
-      <h2 className="top-word">Той иелері</h2>
+      <h2 className="top-word">Той иесі</h2>
       <motion.h3
         ref={ref}
         className="text-4xl mt-20"
@@ -52,7 +52,6 @@ const ToiIeleri = () => {
       >
         ҚАНАТ
       </motion.h3>
-      <br />
       <br />
     </div>
   );

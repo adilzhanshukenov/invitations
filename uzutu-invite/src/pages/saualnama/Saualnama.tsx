@@ -66,7 +66,7 @@ const Saualnama = () => {
         onSubmit={handleSubmit}
         className="flex flex-col justify-center items-center gap-5"
       >
-        <label className="block mb-4">
+        <label className="flex flex-col justify-center items-center mb-4 gap-2">
           <span className="text-gray-700 text-xl mb-4">
             АТЫ-ЖӨНІҢІЗДІ ЖАЗЫҢЫЗ
           </span>
