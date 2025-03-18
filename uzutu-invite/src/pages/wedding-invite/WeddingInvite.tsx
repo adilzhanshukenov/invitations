@@ -54,7 +54,7 @@ export default function WeddingInvite() {
         {/* Текст, выходящий справа и останавливающийся в центре */}
         <img
           className="rounded-xl"
-          style={{ width: "300px", height: "450px" }}
+          style={{ width: "350px", height: "450px" }}
           src="images/main.jpg"
           alt="wedding pic"
         />

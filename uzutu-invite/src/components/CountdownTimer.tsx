@@ -26,7 +26,7 @@ export default function CountdownTimer() {
   }, []);
 
   return (
-    <div className="text-center flex flex-col justify-center items-center text-4xl font-bold p-6 bg-green-800 text-white">
+    <div className="text-center flex flex-col justify-center items-center text-4xl font-bold p-6 bg-green-700 opacity-100 text-white">
       <br />
       <h3 className="w-90">ТОЙ САЛТАНАТЫНА ДЕЙІН ҚАЛДЫ:</h3>
       <br />
