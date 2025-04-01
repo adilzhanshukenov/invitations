@@ -43,11 +43,11 @@ const Saualnama = () => {
         "JhuOY-hS42WgEeqPQ" // Replace with EmailJS Public Key
       )
       .then(() => {
-        alert("Your RSVP has been sent successfully!");
+        alert("Жауап жіберілді! Рахмет.");
         setFormData({ name: "", answer: "" });
       })
       .catch((error) => {
-        alert("Failed to send RSVP.");
+        alert("Ошибка");
         console.error("EmailJS Error:", error);
       });
   };
