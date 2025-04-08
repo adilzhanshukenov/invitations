@@ -42,3 +42,7 @@
     animation: logo-spin infinite 20s linear;
   }
 }
+
+.custom-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

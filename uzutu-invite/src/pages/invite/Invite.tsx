@@ -27,51 +27,22 @@ const Invite = () => {
     } else {
       controls.start({
         opacity: 0,
-        x: scrollDir === "down" ? 150 : -200,
+        x: scrollDir === "down" ? 200 : -200,
         y: 0,
       });
       imgControls.start({
         opacity: 0,
-        x: scrollDir === "down" ? 150 : -200,
+        x: scrollDir === "down" ? 200 : -200,
         y: 0,
       });
     }
   }, [inView, scrollDir, controls, imgControls]);
   return (
     <div className="relative">
-      <motion.h2
-        ref={ref}
-        className="text-2xl top-word mt-20"
-        initial={{ opacity: 0, x: 150 }}
-        animate={controls}
-        transition={{ duration: 0.5, delay: 0.3, ease: "easeIn" }}
-      >
-        Той салтанаты
-      </motion.h2>
-
-      {/* Картинка, выезжающая вместе с текстом */}
-      <motion.img
-        ref={ref}
-        src="images/main2.jpg"
-        alt="Wedding"
-        style={{
-          width: "220px",
-          zIndex: "20",
-          height: "400px",
-          borderRadius: "20px",
-          marginLeft: "auto",
-          marginRight: "auto",
-        }}
-        className="w-64 h-64 mr-auto ml-auto"
-        initial={{ opacity: 0, x: 200 }}
-        animate={imgControls}
-        transition={{ duration: 0.6, delay: 0.5, ease: "easeIn" }}
-      />
-      <br />
       <motion.h1
         ref={ref}
-        className="text-2xl"
-        initial={{ opacity: 0, x: 200 }}
+        className="text-2xl italic custom-text"
+        initial={{ opacity: 0, x: 100 }}
         animate={controls}
         transition={{ duration: 0.8, delay: 0.6, ease: "easeIn" }}
       >
@@ -79,12 +50,12 @@ const Invite = () => {
       </motion.h1>
       <motion.label
         ref={ref}
-        className="text-4xl"
-        initial={{ opacity: 0, x: 200 }}
+        className="text-4xl italic custom-text"
+        initial={{ opacity: 0, x: 100 }}
         animate={controls}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeIn" }}
       >
-        18:00
+        17:00
       </motion.label>
     </div>
   );

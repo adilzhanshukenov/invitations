@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const ToiIeleri = () => {
+const InvitePic = () => {
   const [scrollDir, setScrollDir] = useState("down");
   const controls = useAnimation();
   const imgControls = useAnimation();
@@ -38,23 +38,38 @@ const ToiIeleri = () => {
     }
   }, [inView, scrollDir, controls, imgControls]);
   return (
-    <div className="p-40px">
-      <br />
-      <br />
-      <br />
-      <h2 className="top-word">Той иесі</h2>
-      <motion.h3
+    <div className="relative">
+      <motion.h2
         ref={ref}
-        className="text-6xl mt-20"
-        initial={{ opacity: 0, x: 200 }}
+        className="text-2xl top-word mt-20"
+        initial={{ opacity: 0, x: 100 }}
         animate={controls}
-        transition={{ duration: 0.8, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.3, ease: "easeIn" }}
       >
-        ҚАНАТ
-      </motion.h3>
+        Той салтанаты
+      </motion.h2>
+
+      {/* Картинка, выезжающая вместе с текстом */}
+      <motion.img
+        ref={ref}
+        src="images/main2.jpg"
+        alt="Wedding"
+        style={{
+          width: "200px",
+          zIndex: "20",
+          height: "350px",
+          borderRadius: "20px",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+        className="w-64 h-64 mr-auto ml-auto"
+        initial={{ opacity: 0, x: 100 }}
+        animate={imgControls}
+        transition={{ duration: 0.6, delay: 0.5, ease: "easeIn" }}
+      />
       <br />
     </div>
   );
 };
 
-export default ToiIeleri;
+export default InvitePic;

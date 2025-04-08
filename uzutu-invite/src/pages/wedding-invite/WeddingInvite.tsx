@@ -7,6 +7,7 @@ import Schedule from "../schedule/Schedule";
 import Invite from "../invite/Invite";
 import Preword from "../preword/Preword";
 import CountdownTimer from "../../components/CountdownTimer";
+import InvitePic from "../InvitePic/InvitePic";
 
 export default function WeddingInvite() {
   return (
@@ -60,6 +61,7 @@ export default function WeddingInvite() {
         />
       </div>
       <Preword />
+      <InvitePic />
       <Invite />
       <Schedule />
       <Address />
